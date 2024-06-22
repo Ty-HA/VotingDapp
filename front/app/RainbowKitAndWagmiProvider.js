@@ -6,7 +6,9 @@ import {
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
-import { sepolia } from '@/utils/sepolia';
+import { hardhat, sepolia } from 'wagmi/chains';
+//import { sepolia } from '@/utils/sepolia';
+//import { hardhat } from 'viem/chains';
 import {
   QueryClientProvider,
   QueryClient,
@@ -16,7 +18,8 @@ const config = getDefaultConfig({
     appName: 'Voting Dapp',
     // walletConnect projetId
     projectId: '5a04db586b85aea93b8298876e4213f5',
-    chains: [sepolia],
+    chains: [hardhat, sepolia],
+
     ssr: true, // If your dApp uses server side rendering (SSR)
 
 });
