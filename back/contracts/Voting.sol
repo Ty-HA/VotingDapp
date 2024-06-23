@@ -4,7 +4,7 @@ pragma solidity 0.8.20;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
- * FLOW description
+ * FLOW description 
  * 1. Owner can register voters
  * 2. Owner can start proposal registration
  * 3. Voters can register proposals
@@ -22,7 +22,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 
-contract Voting is Ownable {
+contract Voting2 is Ownable {
 
     /// @notice ID of Winning Proposal 
     uint public winningProposalID;
@@ -72,9 +72,10 @@ contract Voting is Ownable {
     event Voted (address voter, uint proposalId);
 
     constructor() Ownable(msg.sender) {    }
-    
+
+   
     modifier onlyVoters() {
-        require(voters[msg.sender].isRegistered, "You're not a voter");
+//        require(voters[msg.sender].isRegistered, "You're not a voter");
         _;
     }
     

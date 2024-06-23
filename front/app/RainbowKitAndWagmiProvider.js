@@ -19,9 +19,7 @@ const config = getDefaultConfig({
     // walletConnect projetId
     projectId: '5a04db586b85aea93b8298876e4213f5',
     chains: [hardhat, sepolia],
-
     ssr: true, // If your dApp uses server side rendering (SSR)
-
 });
 
 const queryClient = new QueryClient();
